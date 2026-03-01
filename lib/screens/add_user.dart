@@ -104,7 +104,7 @@ class _AddUserState extends State<AddUser> {
                 ListTile(
                   leading: const Icon(Icons.link, color: Colors.deepPurple),
                   title: const Text('URL'),
-                  subtitle: const Text('Entrer une URL d\'image'),
+                  subtitle: const Text('Entrer une URL d\'image user'),
                   onTap: () {
                     Navigator.pop(context);
                     setState(() {
@@ -116,7 +116,7 @@ class _AddUserState extends State<AddUser> {
                 if (_imagePath != null || _imageUrlController.text.isNotEmpty)
                   ListTile(
                     leading: const Icon(Icons.delete, color: Colors.red),
-                    title: const Text('Supprimer l\'image'),
+                    title: const Text('Supprimer l\'image user'),
                     onTap: () {
                       Navigator.pop(context);
                       setState(() {
