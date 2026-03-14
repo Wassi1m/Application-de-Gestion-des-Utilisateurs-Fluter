@@ -32,7 +32,6 @@ class _AddUserState extends State<AddUser> {
     super.dispose();
   }
 
-  // Sélectionner une image depuis la galerie
   Future<void> _pickImageFromGallery() async {
     final XFile? pickedFile = await _imagePicker.pickImage(
       source: ImageSource.gallery,
@@ -48,7 +47,6 @@ class _AddUserState extends State<AddUser> {
     }
   }
 
-  // Capturer une image depuis l'appareil photo
   Future<void> _pickImageFromCamera() async {
     final XFile? pickedFile = await _imagePicker.pickImage(
       source: ImageSource.camera,
@@ -64,7 +62,6 @@ class _AddUserState extends State<AddUser> {
     }
   }
 
-  // Afficher les options de sélection d'image
   void _showImagePickerOptions() {
     showModalBottomSheet(
       context: context,
@@ -235,7 +232,6 @@ class _AddUserState extends State<AddUser> {
             children: [
               const SizedBox(height: 16),
 
-              // Section Image
               _buildImagePreview(),
               const SizedBox(height: 8),
               TextButton.icon(
@@ -244,7 +240,6 @@ class _AddUserState extends State<AddUser> {
                 label: const Text('Choisir une image'),
               ),
 
-              // Champ URL si mode URL activé
               if (_useUrl) ...[
                 const SizedBox(height: 8),
                 TextFormField(
@@ -262,7 +257,6 @@ class _AddUserState extends State<AddUser> {
 
               const SizedBox(height: 24),
 
-              // Champ Nom
               TextFormField(
                 controller: _nameController,
                 decoration: const InputDecoration(
@@ -299,7 +293,6 @@ class _AddUserState extends State<AddUser> {
               ),
               const SizedBox(height: 16),
 
-              // Champ Description
               TextFormField(
                 controller: _descriptionController,
                 decoration: const InputDecoration(
@@ -312,7 +305,6 @@ class _AddUserState extends State<AddUser> {
               ),
               const SizedBox(height: 32),
 
-              // Bouton Enregistrer
               SizedBox(
                 width: double.infinity,
                 height: 50,
